@@ -15,39 +15,12 @@ type Encoder struct {
 	byteOrder binary.ByteOrder
 }
 
-//
-// NewEncoder принимает на вход bytes.Buffer и binary.LittleEndian
-//
-// buf := new(bytes.Buffer)
-// encoder := binencoder.NewEncoder(buf, binary.LittleEndian)
-//
-
 func NewEncoder(w io.Writer, byteOrder binary.ByteOrder) *Encoder {
 	return &Encoder{
 		w:         w,
 		byteOrder: byteOrder,
 	}
 }
-
-//
-// Encode принимает на вход какую-нибудь структуру и длину байтовой записи.
-// Если необходимо использовать стандартную для типа длину, необходимо задать = 0.
-//
-// Длину байтовой структуры для поля структуры можно задать тегом: `len:"10"`.
-// Если тег не задан, то len наследуется от родительского поля, если он был задан, или принимает значение
-// заданное в функции Encode, или принимается равным 0.
-//
-// Для того, чтобы игнорировать длину, заданную для родительского поля, либо задать собственную длину,
-// необходимо явно указать длину в теге.
-//
-// Если задать тег `len:"-"`, поле будет пропущено.
-//
-// (!) Логика тегов на данный момент некорректно работает с BigEndian.
-//
-//
-// Типы, которые он может серилизовать функция: bool, uint8, uint16, uint32, int32, uint64, int64, string, slice, struct.
-// Серилизация происходить последовательно и зависит от структуры типа.
-//
 
 func (enc *Encoder) Encode(data interface{}, bytesLen int) error {
 	if bytesLen == -1 {
