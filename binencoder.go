@@ -97,7 +97,7 @@ func encodeBaseType(data interface{}) ([]byte, error) {
 		), nil
 
 	case reflect.Int16:
-		val := uint16(v.Uint())
+		val := uint16(v.Int())
 		return append(b,
 			uint8(val),
 			uint8(val>>8),

@@ -32,6 +32,7 @@ type InStruct struct {
 	InBool2   bool
 	InUint8   uint8
 	InUint16  uint16
+	InInt16   int16
 	InUint32  uint32
 	InInt32   int32
 	InUint64  uint64
@@ -56,6 +57,7 @@ var (
 					InBool2:  false,
 					InUint8:  15,
 					InUint16: 255,
+					InInt16:  255,
 					InUint32: 255,
 					InInt32:  255,
 					InUint64: 255,
@@ -78,6 +80,7 @@ var (
 					1,
 					0,
 					15,
+					255, 0,
 					255, 0,
 					255, 0, 0, 0,
 					255, 0, 0, 0,
