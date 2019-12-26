@@ -1,1 +1,6 @@
-cat codecov.yml | curl --data-binary @- https://codecov.io/validate
+codecov:
+  token: ef46132b-1bb1-4c13-995d-17badcf4fc41
+coverage:
+  precision: 2
+  round: down
+  range: "70...100"

@@ -1,6 +1,7 @@
 # BinEncoder
 
 [![codecov](https://codecov.io/gh/milQA/binencoder/branch/master/graph/badge.svg)](https://codecov.io/gh/milQA/binencoder)
+[![Build Status](https://travis-ci.org/milQA/binencoder.svg?branch=master)](https://travis-ci.org/milQA/binencoder)
 
 ## Instal
 
