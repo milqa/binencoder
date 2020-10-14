@@ -55,7 +55,6 @@ func (enc *Encoder) Encode(data interface{}, bytesLen int) error {
 			log.Printf("[encodeBaseType] Error: %s", err)
 			return nil
 		}
-		// fmt.Printf("Data: %s Len: %v\n", data, bytesLen)
 		if bytesLen != 0 {
 			delta := bytesLen - len(by)
 			if delta < 0 {
