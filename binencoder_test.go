@@ -91,23 +91,6 @@ var (
 				},
 			},
 		},
-		/* need fix
-		*	testData{
-		*		in: inData{
-		*			byteOrder: binary.BigEndian,
-		*			data: InStruct{
-		*				InBool:   true,
-		*				InUint16: 255,
-		*			},
-		*		},
-		*		out: outData{
-		*			answer: []byte{
-		*				1,
-		*				0, 255,
-		*			},
-		*		},
-		*	},
-		 */
 	}
 )
 
